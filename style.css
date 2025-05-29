@@ -1,0 +1,181 @@
+:root {
+      --primary: #5b4fff;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 30px;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .header .info {
+      font-weight: 600;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .info-box {
+      background: #e9edfd;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 2px 6px var(--shadow);
+    }
+
+    .info-box span.value {
+      font-weight: bold;
+      color: #1e1e60;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      display: flex;
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .left-column {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .settings, .game-area, .how-to {
+      background: #f2f5ff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      /* box-shadow: 0 8px 20px var(--shadow); */
+      width: 100%;
+      box-shadow: 0 -8px 12px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .settings label, .settings select, .settings input[type="file"] {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .settings select, .settings input[type="file"], .settings button {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .settings button {
+      background-color: var(--primary);
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    #puzzle-container {
+      margin-top: 1rem;
+      width: 500px;
+      height: 380px;
+      display: grid;
+      gap: 4px;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background: #eee;
+      align-self: center;
+      
+    }
+
+    .tile {
+      background-size: 500px 380px;
+      cursor: grab;
+      user-select: none;
+      border-radius: 0.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .tile:hover {
+      transform: scale(1.05);
+    }
+
+    .how-to h2 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 90%;
+      width: 350px;
+    }
+
+    .modal-content h2 {
+      margin-top: 0;
+      color: #5b4fff;
+    }
+
+    .modal-content button {
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background: #5b4fff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
